@@ -2,18 +2,18 @@ import java.util.Scanner;
 
 public class PasswordValidator {
 
-    // Method to check password validity
+
     public static boolean isValidPassword(String password) {
         boolean hasUppercase = false;
         boolean hasDigit = false;
 
-        // Check length
+        
         if (password.length() < 8) {
             System.out.println("Password is too short. Minimum 8 characters required.");
             return false;
         }
 
-        // Loop through each character
+        
         for (int i = 0; i < password.length(); i++) {
             char ch = password.charAt(i);
 
@@ -26,7 +26,7 @@ public class PasswordValidator {
             }
         }
 
-        // Feedback messages
+        
         if (!hasUppercase) {
             System.out.println("Password must contain at least one uppercase letter.");
         }
@@ -35,7 +35,7 @@ public class PasswordValidator {
             System.out.println("Password must contain at least one digit.");
         }
 
-        // Final validation
+        
         return hasUppercase && hasDigit;
     }
 
@@ -43,7 +43,7 @@ public class PasswordValidator {
         Scanner scanner = new Scanner(System.in);
         String password;
 
-        // Retry mechanism using while loop
+        
         while (true) {
             System.out.print("Enter your password: ");
             password = scanner.nextLine();
